@@ -4,14 +4,14 @@ function createPreference(req, res) {
   try {
     const items = req.body.items; // Recibe los elementos del carrito desde el cuerpo de la solicitud
     const preference = {
-      items: items.map(item => ({
+      items: items.map((item) => ({
         title: item.title,
         unit_price: item.unit_price,
         quantity: item.quantity,
       })),
       back_urls: {
-        success: "http://localhost:5173/home",
-        failure: "http://localhost:5173/cart",
+        success: "https://vehibuy-rho.vercel.app/home",
+        failure: "https://vehibuy-rho.vercel.app//cart",
         pending: "",
       },
       auto_return: "approved",
@@ -22,7 +22,7 @@ function createPreference(req, res) {
       .then(function (response) {
         res.json({
           id: response.body.id,
-          status: "approved"
+          status: "approved",
         });
       })
       .catch(function (error) {
