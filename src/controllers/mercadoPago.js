@@ -11,7 +11,7 @@ function createPreference(req, res) {
       })),
       back_urls: {
         success: "https://vehibuy-rho.vercel.app/home",
-        failure: "https://vehibuy-rho.vercel.app//cart",
+        failure: "https://vehibuy-rho.vercel.app/cart",
         pending: "",
       },
       auto_return: "approved",
