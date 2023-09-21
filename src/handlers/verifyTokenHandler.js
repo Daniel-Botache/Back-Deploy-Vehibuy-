@@ -16,7 +16,7 @@ const verifyTokenHandler = async (req, res) => {
     const user = await getEmailController(decoded.email);
     if (user) {
       await updateUserStatusController(decoded.email, "verificado");
-      res.redirect("http://localhost:5173/login");
+      res.redirect("https://vehibuy-rho.vercel.app/login");
     } else {
       res.status(404).send("Usuario no encontrado");
     }
