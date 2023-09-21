@@ -10,7 +10,7 @@ const verifyTokenHandler = async (req, res) => {
   const { token } = req.params;
   try {
     // Verifica el token
-    const decoded = jwt.verify(token, "SECRET_KEY");
+    const decoded = jwt.verify(token, "1234");
 
     // Actualiza el estado del usuario en la base de datos
     const user = await getEmailController(decoded.email);
