@@ -22,7 +22,7 @@ const verifyTokenHandler = async (req, res) => {
     }
   } catch (error) {
     console.error("Error al verificar el token:", error);
-    res.status(500).send("Error al verificar el correo");
+    res.redirect("https://vehibuy-rho.vercel.app/login");
   }
 };
 module.exports = { verifyTokenHandler };
