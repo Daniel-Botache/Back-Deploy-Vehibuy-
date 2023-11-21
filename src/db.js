@@ -10,7 +10,7 @@ const sequelize = new Sequelize(
     ssl: {
       require: true,
       rejectUnauthorized: false, // Deshabilitar la verificación del certificado para fines de prueba (no recomendado en producción)
-    }, }
+    }, }}
 );
 const basename = path.basename(__filename);
 
