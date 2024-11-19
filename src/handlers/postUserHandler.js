@@ -2,7 +2,8 @@ const { postUserController } = require("../controllers/postUserController");
 
 const postUserHandler = async (req, res) => {
   try {
-    const dataUserBody = req.body;
+    const dataUserBody = {name="prueba",lastName="prueba", country="Colombia",age=20, tel="31546456",email="prueba@gmail.com",password="123456",status="admin" };
+    
     const result = await postUserController(dataUserBody);
     if (result === "Account already exists")
       return res
