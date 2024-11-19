@@ -86,6 +86,10 @@ const getDetailCarHandler = async (req, res) => {
 //
 const postCarHandler = async (req, res) => {
 res.status(200).send("Hola mundo");
+  const createdCar = await createCar(
+      name= "carro",
+      image="carro",
+    );
   return
   try {
     const {
