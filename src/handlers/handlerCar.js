@@ -85,11 +85,12 @@ const getDetailCarHandler = async (req, res) => {
 //-----------------------------postCar---------------------------------------------------------------
 //
 const postCarHandler = async (req, res) => {
-res.status(200).send("Hola mundo");
+
   const createdCar = await createCar(
       name= "carro",
       image="carro",
     );
+  res.status(200).send("Hola mundo");
   return
   try {
     const {
